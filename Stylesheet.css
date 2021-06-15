@@ -1,0 +1,53 @@
+.leiste {
+	margin-left: 35%;
+}
+
+p.overflow {
+	width: 45%;
+	overflow: auto;
+}
+
+h1 {
+	margin-left: 47%;
+}
+
+h3 {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+}
+
+h4 {
+	color: red;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: red;
+}
+
+body {
+	background: #F2EFD9;
+	opacity: 0.9;
+	text-align: justify;
+}
+
+button {
+	box-shadow: 5px 5px 5px grey;
+}
+
+.picture-card {
+	width: 250px;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	text-align: center;
+}
+
+div.resize {
+	border: 2px solid;
+  	padding: 20px; 
+ 	width: 300px;
+  	resize: both;
+  	overflow: auto;
+}
