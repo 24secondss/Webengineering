@@ -39,7 +39,7 @@ body {
 	text-align: justify;
 }
 
-button {
+input[type=submit] {
 	box-shadow: 5px 5px 5px grey;
 }
 
