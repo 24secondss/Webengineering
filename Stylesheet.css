@@ -22,7 +22,7 @@ h3 {
 }
 
 h4 {
-	color: red;
+	color: black;
 }
 
 a:visited {
@@ -62,4 +62,8 @@ div.resize {
  	width: 300px;
   	resize: both;
   	overflow: auto;
+}
+
+small {
+	color: red;
 }

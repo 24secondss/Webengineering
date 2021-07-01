@@ -12,12 +12,10 @@
 		$passwort = sprintf("\n%s", $passwort_input);
 		fputs($fhandle, $benutzername);
 		fputs($fhandle, $passwort);
-		sleep(1);
 		header("Location: Account_registriert.html");
 	}
 	else
 	{
-		sleep(1);
 		header("Location: Account.html");
 	}
 	

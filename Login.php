@@ -12,17 +12,17 @@
 		if ($benutzername_input == trim($logindaten[$i])) {
 			$logindaten[$i + 1] = fgets($fhandle);
 			if ($passwort_input == trim($logindaten[$i + 1])) {
-				sleep(1);
 				$j++;
-				header("Location: Account_angemeldet");
+				header("Location: Account_angemeldet.html");
 			}
 			else {
-				sleep(1);
 				header("Location: Account.html");
 			}
 		}
 		$i++;
 	}
-	sleep(1);
-	header("Location: Account.html");
+			
+	if ($j == 0) {
+		header("Location: Account.html");
+	}
 ?>
