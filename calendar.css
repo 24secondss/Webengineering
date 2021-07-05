@@ -1,9 +1,10 @@
 #cal { 
-    -moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
-    -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
     margin:50px auto; 
     font: 13px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif; 
     display:table; 
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25); 
 }
 
 #cal .header { 
@@ -58,18 +59,18 @@
 } 
 #cal .header .left.button { 
     left:0; 
-    -webkit-border-top-left-radius: 5px; 
-    -moz-border-radius-topleft: 5px; 
-    border-top-left-radius: 5px; 
     border-right:1px solid #ae2a0c; 
+    border-top-left-radius: 5px; 
+    -moz-border-radius-topleft: 5px; 
+    -webkit-border-top-left-radius: 5px; 
 } 
 #cal .header .right.button { 
     right:0; 
-    top:0; 
+    top: 0;
     border-left:1px solid #ae2a0c; 
-    -webkit-border-top-right-radius: 5px; 
-    -moz-border-radius-topright: 5px; 
     border-top-right-radius: 5px; 
+    -moz-border-radius-topright: 5px; 
+    -webkit-border-top-right-radius: 5px; 
 } 
 #cal .header .button:hover { 
     background: -moz-linear-gradient(top, #d94215, #bb330f); 
@@ -95,7 +96,7 @@
     border:1px solid #e6e6e6; 
     cursor:default; 
 } 
-#cal #days td { 
+#cal #day td { 
     height:26px; 
     line-height: 26px; 
     text-transform:uppercase; 
@@ -119,6 +120,7 @@
     background:#CD310D; 
     background: -moz-linear-gradient(top, #b32b0c, #cd310d); 
     background: -webkit-gradient(linear, left top, left bottom, from(#b32b0c), to(#cd310d)); 
+    box-shadow: 0px 0px 0px;
     -moz-box-shadow:0px 0px 0px; 
     -webkit-box-shadow:0px 0px 0px; 
 }

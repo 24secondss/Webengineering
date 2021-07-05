@@ -1,6 +1,6 @@
 var CALENDAR = function () { 
 	var wrap, label,  
-		months = ["Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]; 
+		months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]; 
  
 	function init(newWrap) { 
 		wrap     = $(newWrap || "#cal"); 
@@ -8,7 +8,7 @@ var CALENDAR = function () {
 		
 		wrap.find("#prev").bind("click.calendar", function () { switchMonth(false); }); 
 		wrap.find("#next").bind("click.calendar", function () { switchMonth(true);  }); 
-		label.bind("click", function () { switchMonth(null, new Date().getMonth()), new Date().getFullYear(); });        
+		label.bind("click", function () { switchMonth(null, new Date().getMonth(), new Date().getFullYear() ); });        
 		label.click();
 	} 
  
@@ -16,9 +16,11 @@ var CALENDAR = function () {
 		var curr = label.text().trim().split(" "), calendar, tempYear =  parseInt(curr[1], 10);
 		
 		month = month || ((next) ? ( (curr[0] === "Dezember") ? 0 : months.indexOf(curr[0]) + 1 ) : ( (curr[0] === "Januar") ? 11 : months.indexOf(curr[0]) - 1 )); 
-		year = year || ((next && month === 0) ? tempYear + 1 : (!next && month === 11) ? temYear -1 : tempYear);
+		year = year || ((next && month === 0) ? tempYear + 1 : (!next && month === 11) ? tempYear -1 : tempYear);
 		
+		console.profile("createCal");
 		calendar =  createCal(year, month);
+		console.profileEnd("createCal");
 		 
 	    $("#cal-frame", wrap) 
 	    	.find(".curr") 
@@ -28,14 +30,13 @@ var CALENDAR = function () {
 	        .prepend(calendar.calendar()) 
 	        .find(".temp") 
 	        	.fadeOut("slow", function () { $(this).remove(); }); 
- 
- 		$('#label').text(calendar.label);
+	    label.text(calendar.label);
 	} 
  
 	function createCal(year, month) { 
  		var day = 1, i, j, haveDays = true,  
 	        startDay = new Date(year, month, day).getDay(), 
-	        daysInMonths = [31, (((year%4==0)&&(year%100!=0))||(year%400==0)) ? 29 : 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31 ],
+	        daysInMonths = [31, (((year%4===0)&&(year%100!==0))||(year%400===0)) ? 29 : 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30, 31 ],
 	        calendar = [];
 	
 		if (createCal.cache[year]) { 
@@ -88,7 +89,7 @@ var CALENDAR = function () {
 		    $('td', calendar).filter(function () { return $(this).text() === new Date().getDate().toString(); }).addClass("today"); 
 		} 
 		
-		createCal[year][month] = { calendar : function () { return calendar.clone() }, label : months[month] + " " + year }; 
+		createCal.cache[year][month] = { calendar : function () { return calendar.clone(); }, label : months[month] + " " + year }; 
 	 
 		return createCal.cache[year][month];
 	}
