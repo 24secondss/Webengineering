@@ -17,12 +17,13 @@ text-align: center;
 }
 
 #navigation a {
-    color: orange;
+    color: white;
     padding: 42px;
+    font-weight: bold;
 }
 
 #navigation a:hover {
-    color: blue;
+    color: orange;
 }
 #Begruessung {
     text-align: center;
