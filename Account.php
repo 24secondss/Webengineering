@@ -1,3 +1,11 @@
+<?php
+	if (isset($_COOKIE['Login'])) {
+		$url="Account_angemeldet.php?var1=".$name."&var2=".$telefonnummer."&var3=".$adresse."&var4=".$zusatz."";
+		$url = str_replace(PHP_EOL, '', $url);
+		header("Location: $url");
+	}
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> 
 <html> 
 	<head> 
@@ -11,7 +19,7 @@
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
 			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
-			<div class="leiste" style="margin-left: 80%"> <a href="Account.html"> Mein Account </a> </div>
+			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
 		<div style="margin-top: 5%; margin-left: 35%;">
 			<h3> Einloggen </h3>

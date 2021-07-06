@@ -11,7 +11,7 @@
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
 			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
-			<div class="leiste" style="margin-left: 80%"> <a href="Account.html"> Mein Account </a> </div>
+			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
 		
 		<div style="margin-left: 42%; margin-top: 50px;"> 
@@ -42,7 +42,12 @@
 					echo $_GET['var4']; 
 				?>
 			</div>
-			<input type="submit" value="Bearbeiten" style="margin-top: 25px;">
+			<form action="Registration.php" method="post" id="Registration">
+				<input type="submit" value="Bearbeiten" style="margin-top: 25px;">
+			</form>
+			<form action="Abmelden.php" method="post" id="Abmelden" style="margin-top: -22px">
+				<input type="submit" value="Abmelden" style="margin-left: 100px;">
+			</form>
 		</div>
 
 		<div class="infocards">
