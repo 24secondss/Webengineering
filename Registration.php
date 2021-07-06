@@ -8,7 +8,7 @@
 
 	if($passwort_input == $passwort_validation)
 	{
-		$benutzername = sprintf("\n%s", $benutzername_input);
+		$benutzername = sprintf("%s", $benutzername_input);
 		$passwort = sprintf("\n%s", $passwort_input);
 		fputs($fhandle, $benutzername);
 		fputs($fhandle, $passwort);

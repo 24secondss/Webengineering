@@ -16,23 +16,31 @@
 		
 		<div style="margin-left: 42%; margin-top: 50px;"> 
 			<div> 
-				<h4> Name: </h4>
-				<small> PLATZHALTER </small>
+				Name: 
+				<?php 
+					echo $_GET['var1'];
+				?>
 			</div>
 
 			<div>
-				<h4> Email-Adresse: </h4>
-				<small> PLATZHALTER </small>
+				Telefonnummer: 
+				<?php 
+					echo $_GET['var2']; 
+				?>
 			</div>
 
 			<div> 
-				<h4> Adresse: </h4>
-				<small> PLATZHALTER </small>
+				Adresse: 
+				<?php 
+					echo $_GET['var3']; 
+				?>
 			</div>
 
 			<div> 
-				<h4> Zusatz: </h4>
-				<small> PLATZHALTER </small>
+				Zusatz: 
+				<?php 
+					echo $_GET['var4']; 
+				?>
 			</div>
 			<input type="submit" value="Bearbeiten" style="margin-top: 25px;">
 		</div>
