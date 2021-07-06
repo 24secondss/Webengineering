@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('Bild\ Hauptseite2.jpg');
+}
+
+#top {
+text-align: center;
+}
+
+#logo-name {
+    color: white;
+    background-color:orange;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+#navigation a {
+    color: orange;
+    padding: 42px;
+}
+
+#navigation a:hover {
+    color: blue;
+}
+#Begruessung {
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+}
+
+#Unten {
+    text-align: left;
+    color: white;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    
+}
+
+#footer {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
