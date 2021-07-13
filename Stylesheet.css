@@ -1,3 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Hauptseite2.jpg");
+    background-size: cover;
+}
+
+#top {
+text-align: center;
+}
+
+#logo-name {
+    color: white;
+    background-color:orange;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+#navigation a {
+    color: white;
+    padding: 42px;
+    font-weight: bold;
+}
+
+#navigation a:hover {
+    color: orange;
+}
+
+#Begruessung {
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#Unten {
+    text-align: left;
+    color: white;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left:  10%;
+}
+
+#footer {
+    margin-top: 50px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: white;
+}
+
+.cards {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding-bottom: 1px;
+	background: rgba(220,160,140,0.5);
+}
+
 .leiste {
 	margin-top: -18px;
 }
@@ -8,8 +68,8 @@ p.overflow {
 }
 
 h1 {
-	margin-left: 47%;
-	text-align: justify;
+	
+	text-align: center;
 }
 
 h1.long{
@@ -33,27 +93,14 @@ a:hover {
 	color: red;
 }
 
-body {
-	background: #F2EFD9;
-	opacity: 0.9;
-	text-align: justify;
-}
-
 input[type=submit] {
 	box-shadow: 5px 5px 5px grey;
 }
 
-.cards {
-	width: 250px;
-  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  	text-align: center;
-  	padding-bottom: 1px;
-  	background: #F2E9D8;
-}
 .infocards{
-	/* margin-top: 28%; */
 	margin-left: 15%;
 	margin-right: 7%;
+	color: white;
 }
 
 div.resize {
@@ -65,5 +112,6 @@ div.resize {
 }
 
 small {
-	color: red;
+	text-align: center;
+	color: white;
 }
