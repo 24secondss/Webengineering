@@ -40,24 +40,17 @@ text-align: center;
 #Auswahl a:hover {
     color: blue;
 }
-#Speisen a{
-    color: white;
+#Speisen{
+    color: black;
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
-    margin: 32px;
     text-align: center;
-}
-#Speisen a {
-    color: black;
-    text-align: center;
+    position:absolute;
+    left: 50%;
+    margin-left: -15em;
 }
 
-#Speisen a:hover {
-    color: blue;
-    text-align: center;
-
-}
 #image img {
     width: 100%;
     margin-top: 16px;
