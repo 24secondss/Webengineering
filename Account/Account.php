@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
 		<h1> Account </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
-			<div> <a href="Startpage.html"> Home </a> </div>
+			<div> <a href="index.html"> Home </a> </div>
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
 			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
