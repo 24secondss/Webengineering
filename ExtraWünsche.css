@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+#top {
+text-align: center;
+}
+
+#logo-name {
+    color: white;
+    background-color:orange;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+#navigation a {
+    color: orange;
+    padding: 42px;
+}
+
+#navigation a:hover {
+    color: blue;
+}
+
+#Auswahl a{
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 32px;
+}
+#Auswahl a {
+    color: orange;
+    padding: 42px;
+}
+
+#Auswahl a:hover {
+    color: blue;
+}
+#Speisen a{
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 32px;
+    text-align: center;
+}
+#Speisen a {
+    color: black;
+    text-align: center;
+}
+
+#Speisen a:hover {
+    color: blue;
+    text-align: center;
+}
+#table {
+    text-align: right;
+}
+#image img {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+#Summe {
+    text-align: center;
+}
+
+#Warenkorb {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+#Bestellen-Button {
+    color: orange;
+    text-align: center;
+}

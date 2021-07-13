@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Vorspeisen</title>
+        <link rel="stylesheet" href="styleBestellen.css">
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=EUR" data-sdk-integration-source="button-factory"></script>
+        
+    </head>
+    <body>
+        <div id="top">
+            
+            <div id="logo-name">Island-Grill</div>
+           
+            <div id="navigation">
+                <a href="index.html">Home</a>
+                <a href="Speisekarte.html">Speisekarte</a>
+                <a href="Vorspeise.html"><b>Bestellen</b></a>
+                <a href="#">Reservieren</a>
+                <a href="#">Mein Account</a>
+                <a href="Anfaht.html">Anfahrt</a>
+                <a href="https://www.facebook.com"><img src="fb1.jpg" alt="facebook.de"></a>
+            </div>
+        </div>
+        <div id="image">
+            <img src="zugeschnitten.jpg" alt="Bild Bestellen">
+        </div>
+        
+        <div id="Auswahl">
+            <a href="Vorspeise.html">Vorspeise</a>
+            <a href="Hauptspeise.html">Hauptgericht</a>
+            <a href="Dessert.html">Dessert</a>
+            <a href="Vegetarisch.html">Vegetarisch</a>
+            <a href="ExtraWünsche.html">Extra Wünsche</a>
+        </div>
+        <div id="Speisen">
+            
+            <h3><b>Vorspeisen:</b></h3></p>
+            <a href="#">Kleiner Salat 3,90€</a><br> 
+            <a href="#">Marinierter Feta, Oliven und Peperoni mit Spitzweckle 3,80€</a><br>
+            <a href="#">Gulaschsuppe mit Spitzweckle 3,60€</a></br>
+           
+        </div>
+        
+        <div id="Warenkorb">
+        <table>
+            <tr>
+                <th>Warenkorb</th>
+            </tr>
+            <tr>
+                <td>Wähle deine Gerichte aus der Karte aus und stelle dein Menü zusammen<br>
+                (Bestellmöglichkeit ab einem Mindestbestellwert von 5,00€ exkl. Lieferkosten)</br></td>
+            </tr>
+            
+        </table></div>
+        <p>--------------------------------------------------------------------------------------------------</p>
+        <div id="Summe">
+        <table border="1">
+            <tr>
+                <th>Zwischensumme</th>
+                <td>00,00€</td>
+                
+            </tr>
+            <tr>
+                <th>Gesamt</th>
+                <td>00,00€</td>
+            </tr>
+        </table> </div>
+        <p></p>
+        <div id="BezahlungOrt">
+            <div style="text-align: center;">
+        <a href="Vielen Dank.html"><b>BESTELLEN - Zahlung  vor Ort</a>
+        </div>
+
+        <div class="Bestellen-Button" id="Bestellen">
+            
+                <div id="smart-button">
+                    <div style="text-align: center;">
+                      <div id="paypal-button-container"></div>
+                    </div>
+                  </div>
+        </div>
+                <p></p>
+            
+            <script src="logik.js"></script>
+</body>
+</html>
