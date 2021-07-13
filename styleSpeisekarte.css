@@ -60,3 +60,34 @@ text-align: center;
     text-align: center;
 }
 
+#SweetBurger {
+    position: absolute;
+    margin-top: 125px;
+    height: 250px;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Tiramisu {
+    position: absolute;
+    margin-top: 275px;
+    height: 250px;
+    margin-left: 650px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#VeggiBurger {
+    position: absolute;
+    margin-top: 395px;
+    height: 265px;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Cola {
+    position: absolute;
+    margin-top: 500px;
+    height: 250px;
+    margin-left: 650px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
