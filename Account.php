@@ -12,15 +12,19 @@
 		<title>Island Grill-Account</title> 
 	</head> 
 	<body>
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
 		<h1> Account </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
-			<div> <a href="index.html"> Home </a> </div>
-			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
-			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
-			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
-			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
-		</div>
+			<div id="navigation">
+                <a href="index.html">Home</a>
+                <a href="Speisekarte.html">Speisekarte</a>
+                <a href="Vorspeise.html">Bestellen</a>
+                <a href="Reservieren.html">Reservieren</a>
+                <a href="Account.php">Mein Account</a>
+                <a href="Anfaht.html">Anfahrt</a>
+                <a href="https://www.facebook.com"><img src="fb1.jpg" alt="facebook.de"></a>
+            </div>
 		<div style="margin-top: 5%; margin-left: 35%;">
 			<h3> Einloggen </h3>
 			<form action="Login.php" method="post" id="Anmeldung">
