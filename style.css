@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url("Hauptseite2.jpg");
+    background-size: cover;
 }
 
 #top {
@@ -39,11 +40,21 @@ text-align: center;
     padding: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
+    margin-left:  10%;
     
 }
 
 #footer {
-    margin-top: 16px;
+    margin-top: 50px;
     margin-bottom: 16px;
     text-align: center;
+    color: white;
+}
+
+.cards {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding-bottom: 1px;
+    background: #D8DCE4;
 }
