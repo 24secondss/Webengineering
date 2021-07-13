@@ -1,10 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> 
+<!DOCTYPE html SYSTEM "about:legacy-compat">
 <html> 
-	<head> 
-		<title>Island Grill-Reservieren</title> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Island Grill-Reservieren</title>
+		<link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+		<link rel="stylesheet" href="calendar.css" />
+		<link rel="stylesheet" href="number_of_people.css" />
 	</head> 
 	<body>
-		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
 		<h1> Reservieren </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
 			<div> <a href="Startpage.html"> Home </a> </div>
@@ -14,29 +17,109 @@
 			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
 		<div style="margin-top: 5%">
-			<div>
-				<p> Anzahl Personen: </p>
-				<select>
-					<option> 1 </option>
-					<option> 2 </option>
-					<option> 3 </option>
-					<option> 4 </option>
-					<option> 5 </option>
-					<option> 6 </option>
-					<option> 7 </option>
-					<option> 8 </option>
-					<option> 9 </option>
-					<option> 10 </option>
-				</select>
-				<small> Personen </small>
+			
+			<div style="margin-left: 10%">
+			<form name="Testform">
+				<label>Personenanzahl: 
+					<br></br>
+			    	<select name="Personen" size="1">
+						<option value="P101">1 Person</option>
+						<option value="P102">2 Personen</option>
+						<option value="P103">3 Personen</option>
+						<option value="P104">4 Personen</option>
+						<option value="P105">5 Personen</option>
+						<option value="P106">6 Personen</option>
+						<option value="P107">7 Personen</option>
+						<option value="P108">8 Personen</option>
+						<option value="P109">9 Personen</option>
+						<option value="P110">10 Personen</option>
+					</select>
+				</label>
+			</form>		
 			</div>
-			<div style="margin-top: -18px; margin-left: 47%"> Datum: </div>
-			<div style="margin-top: -18px; margin-left: 85%"> 
+			
+			<div style="margin-top: -5%; margin-left: 85%"> 
 				<p> Uhrzeit: <p>
 				<input type="time" name="time" min="11:00" max="21:00" required="true">
 				<small> Uhr </small>
 			</div>
+			
+			<div style="margin-top: -5%; margin-left: 47%"> Datum: </div>
+				<div id="cal"> 
+	    			<div class="header">
+	 					<span class="left button" id="prev"> &lang; </span> 
+						<span class="left hook"></span> 
+						<span class="month-year" id="label"> Juni 2021 </span> 
+						<span class="right hook"></span> 
+						<span class="right button" id="next"> &rang; </span>
+	    			</div> 
+	    			<table id="days"> 
+	    				<tr>
+							<td>Mo</td> 
+							<td>Di</td> 
+							<td>Mi</td> 
+							<td>Do</td> 
+							<td>Fr</td> 
+							<td>Sa</td>
+							<td>So</td>
+						</tr>
+	    			</table> 
+	    			<div id="cal-frame"> 
+						<table class="curr"> 
+		    				<tbody> 
+		        				<tr>
+		        					<td class="nil"></td>
+		        					<td class="nil"></td>
+		        					<td>1</td>
+		        					<td>2</td>
+		        					<td>3</td>
+		        					<td>4</td>
+		        					<td>5</td>
+		        				</tr> 
+		        				<tr>
+		        					<td>6</td>
+		        					<td>7</td>
+		        					<td>8</td>
+		        					<td>9</td>
+		        					<td>10</td>
+		        					<td class="today">11</td>
+		        					<td>12</td>
+		        				</tr> 
+		        				<tr>
+			        				<td>13</td>
+			        				<td>14</td>
+			        				<td>15</td>
+			        				<td>16</td>
+			        				<td>17</td>
+			        				<td>18</td>
+			        				<td>19</td>
+		        				</tr> 
+		        				<tr>
+			        				<td>20</td>
+			        				<td>21</td>
+			        				<td>22</td>
+			        				<td>23</td>
+			        				<td>24</td>
+			        				<td>25</td>
+			        				<td>26</td>
+		        				</tr> 
+		        				<tr>
+			        				<td>27</td>
+			        				<td>28</td>
+			        				<td>29</td>
+			        				<td>30</td>
+			        				<td class="nil"></td>
+			        				<td class="nil"></td>
+			        				<td class="nil"></td>
+		        				</tr> 
+		    				</tbody> 
+						</table>
+	    			</div> 
+				</div>
 		</div>
+		
+		
+		
 		<div class="infocards">
 			<div class="cards">
 				<h3> Öffnungszeiten </h3>
@@ -56,5 +139,13 @@
 				<p> E-Mail: info@island-grill.de </p>
 			</div>
 		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="calendar.js" ></script>
+		<script src="number_of_people.js" ></script>
+		<script>
+			var cal = CALENDAR();
+			cal.init();
+		</script>
 	</body>
+	
 </html>
