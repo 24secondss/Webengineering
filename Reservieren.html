@@ -25,7 +25,7 @@
 			<div style="margin-left: 10%">
 			<form name="Testform">
 				
-				<label><small>Personenanzahl:</small>
+				<label for="person_number"><small>Personenanzahl:</small>
 					<br></br>
 			    	<select name="Personen" size="1">
 						<option value="P101">1 Person</option>
@@ -40,13 +40,17 @@
 						<option value="P110">10 Personen</option>
 					</select>
 				</label>
+				
 			</form>		
-			</div>saf
+			</div>
 			
-			<div style="margin-top: -5%; margin-left: 85%"> 
-				<p><small> Uhrzeit: </small><p>
-				<input type="time" name="time" min="11:00" max="21:00">
+			<div style="margin-top: -5%; margin-left: 85%">
+			<form>
+			 	<label for="time"><small> Uhrzeit: </small><br></br>
+					<input type="time" name="time" min="11:00" max="21:00">
+				</label>
 				<small> Uhr </small>
+			</form>
 			</div>
 			
 			<div style="margin-top: -5%; margin-left: 48%"><small>Datum: </small></div>
@@ -69,7 +73,8 @@
 							<td>So</td>
 						</tr>
 	    			</table> 
-	    			<div id="cal-frame"> 
+	    			<div id="cal-frame">
+	   
 						<table class="curr"> 
 		    				<tbody> 
 		        				<tr>
@@ -119,12 +124,15 @@
 		        				</tr> 
 		    				</tbody> 
 						</table>
-	    			</div>fsadf
+						
+	    			</div>
 				</div>
 		</div>
 		
-		<div id="navigation" style= "margin-left: 40%" >
-			<a href="Tischreservierung.html"> hier gehts weiter zur Tischreservierung...  </a> 
+		<div id="navigation" style= "margin-left: 41%" >
+			<form action="Tischreservierung.html">
+				<button type="submit">hier gehts weiter zur Tischreservierung...</button>
+			</form>
 		</div>
 		<br></br>
 		
