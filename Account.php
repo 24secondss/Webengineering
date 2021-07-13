@@ -1,11 +1,19 @@
+<?php
+	if (isset($_COOKIE['Login'])) {
+		$url="Account_angemeldet.php?var1=".$name."&var2=".$telefonnummer."&var3=".$adresse."&var4=".$zusatz."";
+		$url = str_replace(PHP_EOL, '', $url);
+		header("Location: $url");
+	}
+?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> 
 <html> 
 	<head> 
-		<title>Island Grill-Reservieren</title> 
+		<title>Island Grill-Account</title> 
 	</head> 
 	<body>
 		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
-		<h1> Reservieren </h1>
+		<h1> Account </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
 			<div> <a href="Startpage.html"> Home </a> </div>
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
@@ -13,29 +21,22 @@
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
 			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
-		<div style="margin-top: 5%">
-			<div>
-				<p> Anzahl Personen: </p>
-				<select>
-					<option> 1 </option>
-					<option> 2 </option>
-					<option> 3 </option>
-					<option> 4 </option>
-					<option> 5 </option>
-					<option> 6 </option>
-					<option> 7 </option>
-					<option> 8 </option>
-					<option> 9 </option>
-					<option> 10 </option>
-				</select>
-				<small> Personen </small>
-			</div>
-			<div style="margin-top: -18px; margin-left: 47%"> Datum: </div>
-			<div style="margin-top: -18px; margin-left: 85%"> 
-				<p> Uhrzeit: <p>
-				<input type="time" name="time" min="11:00" max="21:00" required="true">
-				<small> Uhr </small>
-			</div>
+		<div style="margin-top: 5%; margin-left: 35%;">
+			<h3> Einloggen </h3>
+			<form action="Login.php" method="post" id="Anmeldung">
+				<input type="field" name="Benutzername_login" placeholder="E-Mail"> <br> <br>
+				<input type="password" name="Passwort_login" placeholder="Passwort"> <br> <br>
+				<input type="Submit" value="Anmelden">
+			</form>
+		</div>
+		<div style="margin-top: -8.5%; margin-left: 60%;">
+			<h3> Account anlegen </h3>
+			<form action="Registration.php" method="post" id="Registration">
+				<input type="field" name="Benutzername_registration" placeholder="E-Mail"> <br> <br>
+				<input type="password" name="Passwort_registration" placeholder="Passwort"> <br> <br>
+				<input type="password" name="Passwort_Valid" placeholder="Passwort erneut eingeben"> <br> <br>
+				<input type="submit" value="Registrieren">
+			</form>
 		</div>
 		<div class="infocards">
 			<div class="cards">

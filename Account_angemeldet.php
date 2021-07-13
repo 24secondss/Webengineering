@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> 
 <html> 
 	<head> 
-		<title>Island Grill-Reservieren</title> 
+		<title>Island Grill-Account</title> 
 	</head> 
 	<body>
 		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
-		<h1> Reservieren </h1>
+		<h1> Account </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
 			<div> <a href="Startpage.html"> Home </a> </div>
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
@@ -13,30 +13,43 @@
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
 			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
-		<div style="margin-top: 5%">
+		
+		<div style="margin-left: 42%; margin-top: 50px;"> 
+			<div> 
+				Name: 
+				<?php 
+					echo $_GET['var1'];
+				?>
+			</div>
+
 			<div>
-				<p> Anzahl Personen: </p>
-				<select>
-					<option> 1 </option>
-					<option> 2 </option>
-					<option> 3 </option>
-					<option> 4 </option>
-					<option> 5 </option>
-					<option> 6 </option>
-					<option> 7 </option>
-					<option> 8 </option>
-					<option> 9 </option>
-					<option> 10 </option>
-				</select>
-				<small> Personen </small>
+				Telefonnummer: 
+				<?php 
+					echo $_GET['var2']; 
+				?>
 			</div>
-			<div style="margin-top: -18px; margin-left: 47%"> Datum: </div>
-			<div style="margin-top: -18px; margin-left: 85%"> 
-				<p> Uhrzeit: <p>
-				<input type="time" name="time" min="11:00" max="21:00" required="true">
-				<small> Uhr </small>
+
+			<div> 
+				Adresse: 
+				<?php 
+					echo $_GET['var3']; 
+				?>
 			</div>
+
+			<div> 
+				Zusatz: 
+				<?php 
+					echo $_GET['var4']; 
+				?>
+			</div>
+			<form action="Registration.php" method="post" id="Registration">
+				<input type="submit" value="Bearbeiten" style="margin-top: 25px;">
+			</form>
+			<form action="Abmelden.php" method="post" id="Abmelden" style="margin-top: -22px">
+				<input type="submit" value="Abmelden" style="margin-left: 100px;">
+			</form>
 		</div>
+
 		<div class="infocards">
 			<div class="cards">
 				<h3> Öffnungszeiten </h3>
