@@ -1,45 +1,36 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3c.org/TR/html4/strict.dtd"> 
-<html>
-	<head> 
-		<title>Island Grill-Account</title> 
-	</head> 
-	<body>
-		<h1> Mal schaun obs funktioniert </h1>
+<?php
 
-		<?php
-			$benutzername_input = $_POST["Benutzername_login"];
-			$passwort_input = $_POST["Passwort_login"];
+	$benutzername_input = $_POST["Benutzername_login"];
+	$passwort_input = $_POST["Passwort_login"];
 
-			$file = "Anmeldedaten.txt";
-			$fhandle = fopen($file, "r");
+	$file = "Anmeldedaten.txt";
+	$fhandle = fopen($file, "r");
 
-			$i = 0;
-			$j = 0;
-			while ($line = fgets($fhandle)) {
-				$logindaten[$i] = $line;
-				if ($benutzername_input == trim($logindaten[$i])) {
-					$logindaten[$i + 1] = fgets($fhandle);
-					if ($passwort_input == trim($logindaten[$i + 1])) {
-						$ausgabe = "<p> Erfolgreich eingeloggt </p>";
-						$link = "<a href=\"Account.html\">Zurück zur Anmeldung </a>";
-						echo $ausgabe .= $link;	
-						$j++;
-					}
-					else {
-						$ausgabe = "<p> Passwort ungültig </p>";
-						$link = "<a href=\"Account.html\">Zurück zur Anmeldung </a>";
-						echo $ausgabe .= $link;	
-					}
-				}
-				$i++;
+	$i = 0;
+	$j = 0;
+	while ($line = fgets($fhandle)) {
+		$logindaten[$i] = $line;
+		if ($benutzername_input == trim($logindaten[$i])) {
+			$logindaten[$i + 1] = fgets($fhandle);
+			if ($passwort_input == trim($logindaten[$i + 1])) {
+				$j++;
+				$name = trim(fgets($fhandle));
+				$telefonnummer = trim(fgets($fhandle));
+				$adresse = trim(fgets($fhandle));
+				$zusatz = trim(fgets($fhandle));
+				setcookie("Login", "Login", path: "/");
+				$url="Account_angemeldet.php?var1=".$name."&var2=".$telefonnummer."&var3=".$adresse."&var4=".$zusatz."";
+				$url = str_replace(PHP_EOL, '', $url);
+				header("Location: $url");
 			}
+			else {
+				header("Location: Account.html");
+			}
+		}
+		$i++;
+	}
 			
-			if ($j == 0) {
-				$ausgabe = "<p> Benutzername ungültig </p>";
-				$link = "<a href=\"Account.html\">Zurück zur Anmeldung </a>";
-				echo $ausgabe .= $link;
-			}
-		?>
-
-	</body>
-</html>
+	if ($j == 0) {
+		header("Location: Account.html");
+	}
+?>

@@ -11,25 +11,32 @@
 			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
 			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
 			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
-			<div class="leiste" style="margin-left: 80%"> <a href="Account.html"> Mein Account </a> </div>
+			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
 		</div>
-		<div style="margin-top: 5%; margin-left: 35%;">
-			<h3> Einloggen </h3>
-			<form action="Login.php" method="post" id="Anmeldung">
-				<input type="field" name="Benutzername_login" placeholder="Benutzername"> <br> <br>
-				<input type="password" name="Passwort_login" placeholder="Passwort"> <br> <br>
-				<input type="Submit" value="Anmelden">
+		
+		<div style="margin-left: 42%; margin-top: 50px;">
+			<form action="Speichern.php" method="post" id="Speichern"> 
+				<h3> Bitte geben Sie folgende Informationen ein: </h3>
+				<div> 
+					<h4> Name: </h4>
+					<input type="field" name="Name">
+				</div>
+				<div>
+					<h4> Telefonnummer: </h4>
+					<input type="field" name="Telefonnummer">
+				</div>
+				<div> 
+					<h4> Adresse: </h4>
+					<input type="field" name="Adresse">
+				</div>
+				<div> 
+					<h4> Zusatz: </h4>
+					<textarea rows="5" style="height: 50px" name="Zusatz"></textarea>
+				</div>
+				<input type="submit" value="Speichern" style="margin-top: 25px;">
 			</form>
 		</div>
-		<div style="margin-top: -8.5%; margin-left: 60%;">
-			<h3> Account anlegen </h3>
-			<form action="Registration.php" method="post" id="Registration">
-				<input type="field" name="Benutzername_registration" placeholder="Benutzername"> <br> <br>
-				<input type="password" name="Passwort_registration" placeholder="Passwort"> <br> <br>
-				<input type="password" name="Passwort_Valid" placeholder="Passwort erneut eingeben"> <br> <br>
-				<input type="submit" value="Registrieren">
-			</form>
-		</div>
+
 		<div class="infocards">
 			<div class="cards">
 				<h3> Öffnungszeiten </h3>
