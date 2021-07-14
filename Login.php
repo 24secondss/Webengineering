@@ -18,10 +18,12 @@
 				$telefonnummer = trim(fgets($fhandle));
 				$adresse = trim(fgets($fhandle));
 				$zusatz = trim(fgets($fhandle));
-				setcookie("Login", "Login", path: "/");
-				$url="Account_angemeldet.php?var1=".$name."&var2=".$telefonnummer."&var3=".$adresse."&var4=".$zusatz."";
-				$url = str_replace(PHP_EOL, '', $url);
-				header("Location: $url");
+				setcookie("Name", $name, path:"/");
+				setcookie("Telefonnummer", $telefonnummer, path:"/");
+				setcookie("Adresse", $adresse, path:"/");
+				setcookie("Zusatz", $zusatz, path:"/");
+				setcookie("Login", "Login", path: "/");		
+				header("Location: Account_angemeldet.php");
 			}
 			else {
 				header("Location: Account.html");

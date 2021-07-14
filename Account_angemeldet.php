@@ -6,6 +6,7 @@
 	</head> 
 	<body>
 		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<h1> Account </h1>
 		<div style="margin-left: 14%; margin-top: 2%">
 			<div> <a href="Startpage.html"> Home </a> </div>
@@ -19,28 +20,28 @@
 			<div> 
 				Name: 
 				<?php 
-					echo $_GET['var1'];
+					echo $_COOKIE['Name'];
 				?>
 			</div>
 
 			<div>
 				Telefonnummer: 
 				<?php 
-					echo $_GET['var2']; 
+					echo $_COOKIE['Telefonnummer']; 
 				?>
 			</div>
 
 			<div> 
 				Adresse: 
 				<?php 
-					echo $_GET['var3']; 
+					echo $_COOKIE['Adresse']; 
 				?>
 			</div>
 
 			<div> 
 				Zusatz: 
 				<?php 
-					echo $_GET['var4']; 
+					echo $_COOKIE['Zusatz'];
 				?>
 			</div>
 			<form action="Registration.php" method="post" id="Registration">
@@ -51,24 +52,10 @@
 			</form>
 		</div>
 
-		<div class="infocards">
-			<div class="cards">
-				<h3> Öffnungszeiten </h3>
-				<p> Mo-Fr 11 Uhr - 21 Uhr </p>
-				<p> Sa-So 13 Uhr - 23 Uhr </p>
-			</div>
-			<div style="margin-top: -128px; margin-left: 35%" class="cards">
-				<h3> Anschrift </h3>
-				<p> Island Grill </p>
-				<p> Musterstraße 123 </p>
-				<p> 12345 Stuttgart </p>
-			</div>
-			<div style="margin-top: -163px; margin-left: 70%" class="cards">
-				<h3> Kontakt </h3>
-				<p> Telefon: +49 (711)12 34 56 </p>
-				<p> Fax: +49 (711) 11 22 33 </p>
-				<p> E-Mail: info@island-grill.de </p>
-			</div>
-		</div>
+		<div w3-include-html="footer.html"></div>
+        <script type="text/javascript" src="include.js"></script>
+        <script type="text/javascript">
+            includeHTML();
+        </script>
 	</body>
 </html>

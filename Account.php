@@ -1,8 +1,6 @@
 <?php
 	if (isset($_COOKIE['Login'])) {
-		$url="Account_angemeldet.php?var1=".$name."&var2=".$telefonnummer."&var3=".$adresse."&var4=".$zusatz."";
-		$url = str_replace(PHP_EOL, '', $url);
-		header("Location: $url");
+		header("Location: Account_angemeldet.php");
 	}
 ?>
 
