@@ -15,7 +15,10 @@
 	fputs($fhandle, $telefonnummer);
 	fputs($fhandle, $adresse);
 	fputs($fhandle, $zusatz);
-	$url="Account_angemeldet.php?var1=".$name_input."&var2=".$telefonnummer_input."&var3=".$adresse_input."&var4=".$zusatz_input."";
-	$url = str_replace(PHP_EOL, '', $url);
-	header("Location: $url");
+	setcookie("Name", $name, path:"/");
+	setcookie("Telefonnummer", $telefonnummer, path:"/");
+	setcookie("Adresse", $adresse, path:"/");
+	setcookie("Zusatz", $zusatz, path:"/");
+	setcookie("Login", "Login", path: "/");		
+	header("Location: Account_angemeldet.php");
 ?>

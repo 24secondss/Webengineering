@@ -3,20 +3,27 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Island Grill-Account</title> 
+		<link rel="stylesheet" type="text/css" href="styleAccount.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head> 
 	<body>
-		<link rel="stylesheet" type="text/css" href="Stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<h1> Account </h1>
-		<div style="margin-left: 14%; margin-top: 2%">
-			<div> <a href="Startpage.html"> Home </a> </div>
-			<div class="leiste" style="margin-left: 20%"> <a href="Speisekarte.html"> Speisekarte </a> </div>
-			<div class="leiste" style="margin-left: 40%"> <a href="Bestellen.html"> Bestellen </a> </div>
-			<div class="leiste" style="margin-left: 60%"> <a href="Reservieren.html"> Reservieren </a> </div>
-			<div class="leiste" style="margin-left: 80%"> <a href="Account.php"> Mein Account </a> </div>
+		<div id="top">
+			<div id="logo-name">Island-Grill</div>
 		</div>
+			
+		<div class="navigation">
+			<div id="navigation">
+                <a href="index.html">Home</a>
+                <a href="Speisekarte.html">Speisekarte</a>
+                <a href="BestellSeite.html">Bestellen</a>
+                <a href="Reservieren.html">Reservieren</a>
+                <a href="Account.php">Mein Account</a>
+                <a href="Anfahrt.html">Anfahrt</a>
+                <a href="https://www.facebook.com"><img src="fb1.jpg" alt="facebook.de"></a>
+            </div>
+        </div>
 		
-		<div style="margin-left: 42%; margin-top: 50px;"> 
+		<div class="infos"> 
 			<div> 
 				Name: 
 				<?php 
@@ -45,7 +52,7 @@
 				?>
 			</div>
 			<form action="Registration.php" method="post" id="Registration">
-				<input type="submit" value="Bearbeiten" style="margin-top: 25px;">
+				<input type="submit" value="Bearbeiten" style="margin-left: -105px; margin-top: 25px;">
 			</form>
 			<form action="Abmelden.php" method="post" id="Abmelden" style="margin-top: -22px">
 				<input type="submit" value="Abmelden" style="margin-left: 100px;">
