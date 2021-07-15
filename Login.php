@@ -26,13 +26,13 @@
 				header("Location: Account_angemeldet.php");
 			}
 			else {
-				header("Location: Account.html");
+				header("Location: Account.php");
 			}
 		}
 		$i++;
 	}
 			
 	if ($j == 0) {
-		header("Location: Account.html");
+		header("Location: Account.php");
 	}
 ?>

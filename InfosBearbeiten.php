@@ -5,10 +5,17 @@
 	$adresse_input = $_POST["Adresse"];
 	$zusatz_input = $_POST["Zusatz"];
 
-	$name = sprintf("\n%s", $name_input);
+	$name = sprintf("%s", $name_input);
 	$telefonnummer = sprintf("\n%s", $telefonnummer_input);
 	$adresse = sprintf("\n%s", $adresse_input);
-	$zusatz = sprintf("\n%s", $zusatz_input);
+
+	if (is_null($zusatz_input)) {
+		$zusatz = sprintf("\n ");
+		$zusatzCookie = " ";
+	}
+	else {
+		$zusatz = sprintf("\n%s", $zusatz_input);
+	}
 
 	$file = "Anmeldedaten.txt";
 	$fhandle = fopen($file, "r");
@@ -21,7 +28,7 @@
 			fputs($new, $adresse);
 			fputs($new, $zusatz);
 			for ($i=0; $i < 4 ; $i++) { 
-				$line = fgets($fhandle);
+				$line = fgets($fhandle);5
 			}
 		}
 		else {
@@ -36,6 +43,6 @@
 	setcookie("Name", $name_input, path:"/");
 	setcookie("Telefonnummer", $telefonnummer_input, path:"/");
 	setcookie("Adresse", $adresse_input, path:"/");
-	setcookie("Zusatz", $zusatz_input, path:"/");
+	setcookie("Zusatz", $zusatzCookie, path:"/");
 	header("Location: Account_angemeldet.php");
 ?>
