@@ -34,6 +34,18 @@
 				<input type="field" name="Benutzername_login" placeholder="E-Mail"> <br> <br>
 				<input type="password" name="Passwort_login" placeholder="Passwort"> <br> <br>
 				<input type="Submit" value="Anmelden">
+				<div style="margin-top: 1%; color: darkred;">
+					<?php
+						$error = 0;
+						if (isset($_COOKIE['Error'])) {
+							$error = $_COOKIE['Error'];
+							setcookie("Error", "", time() - 3600,  path: "/");
+						}
+						if ($error != "0") {
+							echo $error;
+						}
+					?>	
+				</div>
 			</form>
 		</div>
 		<div class="Registrieren">
@@ -43,6 +55,18 @@
 				<input type="password" name="Passwort_registration" placeholder="Passwort"> <br> <br>
 				<input type="password" name="Passwort_Valid" placeholder="Passwort erneut eingeben"> <br> <br>
 				<input type="submit" value="Registrieren">
+				<div style="margin-top: 1%; color: darkred;">
+					<?php
+						$error = 0;
+						if (isset($_COOKIE['Error_Reg'])) {
+							$error = $_COOKIE['Error_Reg'];
+							setcookie("Error_Reg", "", time() - 3600,  path: "/");
+						}
+						if ($error != "0") {
+							echo $error;
+						}
+					?>	
+				</div>
 			</form>
 		</div>
 		<div w3-include-html="footer.html"></div>

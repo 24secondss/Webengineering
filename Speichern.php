@@ -15,10 +15,10 @@
 	fputs($fhandle, $telefonnummer);
 	fputs($fhandle, $adresse);
 	fputs($fhandle, $zusatz);
-	setcookie("Name", $name, path:"/");
-	setcookie("Telefonnummer", $telefonnummer, path:"/");
-	setcookie("Adresse", $adresse, path:"/");
-	setcookie("Zusatz", $zusatz, path:"/");
+	setcookie("Name", $name_input, path:"/");
+	setcookie("Telefonnummer", $telefonnummer_input, path:"/");
+	setcookie("Adresse", $adresse_input, path:"/");
+	setcookie("Zusatz", $zusatz_input, path:"/");
 	setcookie("Login", "Login", path: "/");		
 	header("Location: Account_angemeldet.php");
 ?>

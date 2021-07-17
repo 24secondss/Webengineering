@@ -16,7 +16,8 @@
 	}
 	else
 	{
-		header("Location: Account.html");
+		setcookie("Error_Reg", "Die Passwörter stimmen nicht überein!", path:"/");
+		header("Location: Account.php");
 	}
 	
 ?>

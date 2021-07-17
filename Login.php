@@ -26,6 +26,7 @@
 				header("Location: Account_angemeldet.php");
 			}
 			else {
+				setcookie("Error", "Der Benutzername oder das Passwort ist falsch!", path:"/");
 				header("Location: Account.php");
 			}
 		}
@@ -33,6 +34,7 @@
 	}
 			
 	if ($j == 0) {
+		setcookie("Error", "Der Benutzername oder das Passwort ist falsch!", path:"/");
 		header("Location: Account.php");
 	}
 ?>

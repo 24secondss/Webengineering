@@ -48,7 +48,12 @@
 			<div> 
 				Zusatz: 
 				<?php 
-					echo $_COOKIE['Zusatz'];
+					if (isset($_COOKIE['Zusatz'])) {
+						echo $_COOKIE['Zusatz'];
+					}
+					else{
+						echo "";
+					}
 				?>
 			</div>
 			<form action="Weiterleitung.php" method="post" id="Weiterleitung">
