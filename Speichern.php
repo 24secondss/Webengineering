@@ -15,6 +15,7 @@
 	fputs($fhandle, $telefonnummer);
 	fputs($fhandle, $adresse);
 	fputs($fhandle, $zusatz);
+	fclose($fhandle);
 	setcookie("Name", $name_input, path:"/");
 	setcookie("Telefonnummer", $telefonnummer_input, path:"/");
 	setcookie("Adresse", $adresse_input, path:"/");

@@ -24,29 +24,27 @@
 		<div style="margin-top: 5%">
 			
 			<div style="margin-left: 10%">
-			<form name="Testform">
-				
-				<label for="person_number"><small>Personenanzahl:</small>
-					<br></br>
-			    	<select name="Personen" size="1">
-						<option value="P101">1 Person</option>
-						<option value="P102">2 Personen</option>
-						<option value="P103">3 Personen</option>
-						<option value="P104">4 Personen</option>
-						<option value="P105">5 Personen</option>
-						<option value="P106">6 Personen</option>
-						<option value="P107">7 Personen</option>
-						<option value="P108">8 Personen</option>
-						<option value="P109">9 Personen</option>
-						<option value="P110">10 Personen</option>
-					</select>
-				</label>
-				
-			</form>		
+				<form action="Tisch_reservieren.php" method="post" id="Personen">
+					<label for="person_number"><small>Personenanzahl:</small>
+						<br></br>
+				    	<select name="Personen" size="1">
+							<option value="P101">1 Person</option>
+							<option value="P102">2 Personen</option>
+							<option value="P103">3 Personen</option>
+							<option value="P104">4 Personen</option>
+							<option value="P105">5 Personen</option>
+							<option value="P106">6 Personen</option>
+							<option value="P107">7 Personen</option>
+							<option value="P108">8 Personen</option>
+							<option value="P109">9 Personen</option>
+							<option value="P110">10 Personen</option>
+						</select>
+					</label>
+				</form>		
 			</div>
 			
 			<div style="margin-top: -5%; margin-left: 85%">
-			<form>
+			<form action="Tisch_reservieren.php" method="post" id="Uhrzeit">
 			 	<label for="time"><small> Uhrzeit: </small><br></br>
 					<input type="time" name="time" min="11:00" max="21:00">
 				</label>
@@ -55,7 +53,7 @@
 			</div>
 
 			<div style="margin-left: 43%">
-				<form>
+				<form action="Tisch_reservieren.php" method="post" id="Datum">
 					<input type="text" name="Datum" class="tcal">
 				</form>
 			</div>
