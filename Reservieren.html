@@ -21,13 +21,12 @@
                 <a href="https://www.facebook.com"><img src="fb1.jpg" alt="facebook.de"></a>
             </div>
          </div>   
-		<div style="margin-top: 5%">
-			
-			<div style="margin-left: 10%">
-				<form action="Tisch_reservieren.php" method="post" id="Personen">
+		<form action="Tischreservierung.php" method="post" id="Tischreservierung">	
+			<div style="margin-top: 5%">
+				<div style="margin-left: 10%">
 					<label for="person_number"><small>Personenanzahl:</small>
 						<br></br>
-				    	<select name="Personen" size="1">
+					   	<select name="Personen" size="1">
 							<option value="P101">1 Person</option>
 							<option value="P102">2 Personen</option>
 							<option value="P103">3 Personen</option>
@@ -39,31 +38,25 @@
 							<option value="P109">9 Personen</option>
 							<option value="P110">10 Personen</option>
 						</select>
-					</label>
-				</form>		
-			</div>
+					</label>	
+				</div>
 			
-			<div style="margin-top: -5%; margin-left: 85%">
-			<form action="Tisch_reservieren.php" method="post" id="Uhrzeit">
-			 	<label for="time"><small> Uhrzeit: </small><br></br>
-					<input type="time" name="time" min="11:00" max="21:00">
-				</label>
-				<small> Uhr </small>
-			</form>
-			</div>
+				<div style="margin-top: -5%; margin-left: 85%">
+			 		<label for="time"><small> Uhrzeit: </small><br></br>
+						<input type="time" name="time" min="11:00" max="21:00">
+					</label>
+					<small> Uhr </small>
+				</div>
 
-			<div style="margin-left: 43%">
-				<form action="Tisch_reservieren.php" method="post" id="Datum">
+				<div style="margin-left: 43%">
 					<input type="text" name="Datum" class="tcal">
-				</form>
+				</div>
 			</div>
-		</div>
 		
-		<div id="navigation" style= "margin-left: 41%; margin-top: 10%" >
-			<form action="Tischreservierung.html">
+			<div id="navigation" style= "margin-left: 41%; margin-top: 10%" >
 				<button type="submit">hier gehts weiter zur Tischreservierung...</button>
-			</form>
-		</div>
+			</div>
+		</form>
 		<br></br>
 		
 		<div class="infocards">

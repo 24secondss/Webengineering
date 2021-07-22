@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<?php
+	$datum = $_POST["Datum"];
+	$uhrzeit = $_POST["time"];
+	$personen = $_POST["Personen"];
+
+	setcookie("Datum", $datum, path:"/");
+	setcookie("Uhrzeit", $uhrzeit, path:"/");
+	setcookie("Personen", $personen, path:"/");
+
+?>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tischreservierung</title>
+		<link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+	</head>
+	<body>
+		<h1> Tischreservierung </h1>
+		<div style="margin-left: 14%; margin-top: 2%">
+			<div id="navigation">
+                <a href="index.html">Home</a>
+                <a href="Speisekarte.html">Speisekarte</a>
+                <a href="BestellSeite.html">Bestellen</a>
+                <a href="Reservieren.html">Reservieren</a>
+                <a href="Account.php">Mein Account</a>
+                <a href="Anfahrt.html">Anfahrt</a>
+                <a href="https://www.facebook.com"><img src="fb1.jpg" alt="facebook.de"></a>
+            </div>
+         </div>
+
+         <div>
+         	<form action="Tisch_reservieren.php" method="post" id="Tische">
+         		<input type="submit" name="Reservieren">
+         	</form>
+         </div>
+         
+         
+         
+	</body>
+</html>
