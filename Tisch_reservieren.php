@@ -6,7 +6,7 @@
 	$tisch = "TEST";
 	$zustand = "TEST";
 
-	$tischzustand = $tisch . ", " . $zustand . ", " . $uhrzeit . ", " . $personen;
+	$tischzustand = $tisch . "---" . $zustand . "---" . $uhrzeit . "---" . $personen;
 
 	$file = "Tischreservierungen.txt";
 	$fhandle = fopen($file, "r");
@@ -26,6 +26,7 @@
 	if ($i == 0) {
 		fputs($new, "\n" . $datum);
 		fputs($new, "\n" . $tischzustand . "\n");
+		fputs($new, "##########" . "\n");
 	}
 
 	fclose($fhandle);
