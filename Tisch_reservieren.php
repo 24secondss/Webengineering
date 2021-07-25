@@ -4,6 +4,7 @@
 	$personen = $_COOKIE["Personen"];
 
 	$tisch = $_POST["Tisch[]"];
+	echo $tisch;
 	$zustand = "r";
 
 	$tischzustand = $tisch . "---" . $zustand . "---" . $uhrzeit . "---" . $personen;
