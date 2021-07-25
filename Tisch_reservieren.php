@@ -3,8 +3,8 @@
 	$uhrzeit = $_COOKIE["Uhrzeit"];
 	$personen = $_COOKIE["Personen"];
 
-	$tisch = "TEST";
-	$zustand = "TEST";
+	$tisch = $_POST["Tisch[]"];
+	$zustand = "r";
 
 	$tischzustand = $tisch . "---" . $zustand . "---" . $uhrzeit . "---" . $personen;
 
