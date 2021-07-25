@@ -27,7 +27,7 @@ function ready() {
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
-
+//Die Bestellung wird abgeschlossen
 function purchaseClicked() {
     alert('Vielen Dank für Ihre Bestellung')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -51,6 +51,7 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
+//In den Warenkorb rein
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
@@ -61,6 +62,8 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
+
+// Wenn das Produkt mehrmals geklickt wird
 function addItemToCart(title, price) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
@@ -72,6 +75,8 @@ function addItemToCart(title, price) {
             return
         }
     }
+// Artikel / Preis / Menge mit Löschfunktion im Warenkorb
+
     var cartRowContents = `
         <div class="cart-item cart-column">
            
@@ -87,7 +92,7 @@ function addItemToCart(title, price) {
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
-
+//Funktionen zusammenrechnen
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
@@ -126,48 +131,14 @@ window.addEventListener("DOMContentLoaded", function () {
     // get the form elements defined in your form HTML above
   
     var form = document.getElementById("A New Form");
-    // var button = document.getElementById("my-form-button");
-    var status = document.getElementById("status");
-  
-    // Success and Error functions for after the form is submitted
-  
-    function success() {
-      form.reset();
-      status.classList.add("success");
-      status.innerHTML = "Thanks!";
-    }
-  
-    function error() {
-      status.classList.add("error");
-      status.innerHTML = "Oops! There was a problem.";
-    }
-  
-    // handle the form submission event
-  
+    
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
+      ajax(form.method, form.action, data);
     });
   });
   
-  // helper function for sending an AJAX request
-  
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
-
   
     
  
