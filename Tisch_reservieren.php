@@ -6,6 +6,8 @@
 	$tisch = $_POST["Tisch[]"];
 	$zustand = "r";
 
+	echo $tisch;
+
 	$tischzustand = $tisch . "---" . $zustand . "---" . $uhrzeit . "---" . $personen;
 
 	$file = "Tischreservierungen.txt";

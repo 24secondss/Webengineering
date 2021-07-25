@@ -40,7 +40,7 @@
 			<table>
 				<tr>
 					<td> 
-						<div width="25" height="35" align="center"> 1<br><input name="Tisch[]" type="checkbox" value="1">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -78,11 +78,12 @@
 								}
 								fclose($fhandle);
 							?>
+						> 1<br><input name="Tisch[]" type="checkbox" value="1">
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 2<br><input name="Tisch[]" type="checkbox" value="2">
-							<?php 
+						<div width="25" height="35" align="center"
+								<?php 
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -119,10 +120,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 2<br><input name="Tisch[]" type="checkbox" value="2">
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 3<br><input name="Tisch[]" type="checkbox" value="3"
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -160,10 +162,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 3<br><input name="Tisch[]" type="checkbox" value="3"
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 4<br><input name="Tisch[]" type="checkbox" value="4">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -201,10 +204,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 4<br><input name="Tisch[]" type="checkbox" value="4">
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 5<br><input name="Tisch[]" type="checkbox" value="5">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -242,10 +246,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 5<br><input name="Tisch[]" type="checkbox" value="5">
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 6<br><input name="Tisch[]" type="checkbox" value="6">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -283,10 +288,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 6<br><input name="Tisch[]" type="checkbox" value="6">	
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 7<br><input name="Tisch[]" type="checkbox" value="7">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -324,10 +330,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 7<br><input name="Tisch[]" type="checkbox" value="7">	
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 8<br><input name="Tisch[]" type="checkbox" value="8">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -365,10 +372,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 8<br><input name="Tisch[]" type="checkbox" value="8">	
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 9<br><input name="Tisch[]" type="checkbox" value="9">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -406,10 +414,11 @@
 								}
 								fclose($fhandle);
 							?>
+						> 9<br><input name="Tisch[]" type="checkbox" value="9">	
 						</div> 
 					</td>
 					<td> 
-						<div width="25" height="35" align="center"> 10<br><input name="Tisch[]" type="checkbox" value="10">
+						<div width="25" height="35" align="center"
 							<?php 
 			
         						$file = "Tischreservierungen.txt";
@@ -447,6 +456,7 @@
 								}
 								fclose($fhandle);
 							?>
+						> 10<br><input name="Tisch[]" type="checkbox" value="10">	
 						</div> 
 					</td>
 				</tr>
