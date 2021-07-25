@@ -1,36 +1,24 @@
-// Tigra Calendar v5.2 (11/20/2011)
-// http://www.softcomplex.com/products/tigra_calendar/
-// License: Public Domain... You're welcome.
-
-// default settins - this structure can be moved in separate file in multilangual applications
 var A_TCALCONF = {
 	'cssprefix'  : 'tcal',
 	'months'     : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 	'weekdays'   : ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
 	'longwdays'  : ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-	'yearscroll' : true, // show year scroller
-	'weekstart'  : 0, // first day of week: 0-Su or 1-Mo
+	'yearscroll' : true,
+	'weekstart'  : 0,
 	'prevyear'   : 'Previous Year',
 	'nextyear'   : 'Next Year',
 	'prevmonth'  : 'Previous Month',
 	'nextmonth'  : 'Next Month',
-	'format'     : 'm/d/Y' // 'd-m-Y', Y-m-d', 'l, F jS Y'
+	'format'     : 'm/d/Y'
 };
 
 var A_TCALTOKENS = [
-	 // A full numeric representation of a year, 4 digits
 	{'t': 'Y', 'r': '19\\d{2}|20\\d{2}', 'p': function (d_date, n_value) { d_date.setFullYear(Number(n_value)); return d_date; }, 'g': function (d_date) { var n_year = d_date.getFullYear(); return n_year; }},
-	 // Numeric representation of a month, with leading zeros
 	{'t': 'm', 'r': '0?[1-9]|1[0-2]', 'p': function (d_date, n_value) { d_date.setMonth(Number(n_value) - 1); return d_date; }, 'g': function (d_date) { var n_month = d_date.getMonth() + 1; return (n_month < 10 ? '0' : '') + n_month }},
-	 // A full textual representation of a month, such as January or March
 	{'t': 'F', 'r': A_TCALCONF.months.join('|'), 'p': function (d_date, s_value) { for (var m = 0; m < 12; m++) if (A_TCALCONF.months[m] == s_value) { d_date.setMonth(m); return d_date; }}, 'g': function (d_date) { return A_TCALCONF.months[d_date.getMonth()]; }},
-	 // Day of the month, 2 digits with leading zeros
 	{'t': 'd', 'r': '0?[1-9]|[12][0-9]|3[01]', 'p': function (d_date, n_value) { d_date.setDate(Number(n_value)); if (d_date.getDate() != n_value) d_date.setDate(0); return d_date }, 'g': function (d_date) { var n_date = d_date.getDate(); return (n_date < 10 ? '0' : '') + n_date; }},
-	// Day of the month without leading zeros
 	{'t': 'j', 'r': '0?[1-9]|[12][0-9]|3[01]', 'p': function (d_date, n_value) { d_date.setDate(Number(n_value)); if (d_date.getDate() != n_value) d_date.setDate(0); return d_date }, 'g': function (d_date) { var n_date = d_date.getDate(); return n_date; }},
-	 // A full textual representation of the day of the week
 	{'t': 'l', 'r': A_TCALCONF.longwdays.join('|'), 'p': function (d_date, s_value) { return d_date }, 'g': function (d_date) { return A_TCALCONF.longwdays[d_date.getDay()]; }},
-	// English ordinal suffix for the day of the month, 2 characters
 	{'t': 'S', 'r': 'st|nd|rd|th', 'p': function (d_date, s_value) { return d_date }, 'g': function (d_date) { n_date = d_date.getDate(); if (n_date % 10 == 1 && n_date != 11) return 'st'; if (n_date % 10 == 2 && n_date != 12) return 'nd'; if (n_date % 10 == 3 && n_date != 13) return 'rd'; return 'th'; }}
 	
 ];
@@ -43,19 +31,16 @@ function f_tcalGetHTML (d_date) {
 	var s_pfx = A_TCALCONF.cssprefix,
 		s_format = A_TCALCONF.format;
 
-	// today from config or client date
 	var d_today = f_tcalParseDate(A_TCALCONF.today, A_TCALCONF.format);
 	if (!d_today)
 		d_today = f_tcalResetTime(new Date());
 
-	// selected date from input or config or today 
 	var d_selected = f_tcalParseDate(e_input.value, s_format);
 	if (!d_selected)
 		d_selected = f_tcalParseDate(A_TCALCONF.selected, A_TCALCONF.format);
 	if (!d_selected)
 		d_selected = new Date(d_today);
 	
-	// show calendar for passed or selected date
 	d_date = d_date ? f_tcalResetTime(d_date) : new Date(d_selected);
 
 	var d_firstDay = new Date(d_date);
@@ -70,12 +55,10 @@ function f_tcalGetHTML (d_date) {
 		+ (A_TCALCONF.yearscroll ? '<td id="' + s_pfx + 'NextYear"' + f_tcalRelDate(d_date, 1, 'y') + ' title="' + A_TCALCONF.nextyear + '"></td>' : '')
 		+ '</tr></tbody></table><table id="' + s_pfx + 'Grid"><tbody><tr>';
 
-	// print weekdays titles
 	for (var i = 0; i < 7; i++)
 		s_html += '<th>' + A_TCALCONF.weekdays[(A_TCALCONF.weekstart + i) % 7] + '</th>';
 	s_html += '</tr>' ;
 
-	// print calendar table
 	var n_date, n_month, d_current = new Date(d_firstDay);
 	while (d_current.getMonth() == d_date.getMonth() ||
 		d_current.getMonth() == d_firstDay.getMonth()) {
@@ -126,7 +109,6 @@ function f_tcalResetTime (d_date) {
 	return d_date;
 }
 
-// closes calendar and returns all inputs to default state
 function f_tcalCancel () {
 	
 	var s_pfx = A_TCALCONF.cssprefix;
@@ -159,16 +141,13 @@ function f_tcalUpdate (n_date, b_keepOpen) {
 
 function f_tcalOnClick () {
 
-	// see if already opened
 	var s_pfx = A_TCALCONF.cssprefix;
 	var s_activeClass = s_pfx + 'Active';
 	var b_close = f_tcalHasClass(this, s_activeClass);
 
-	// close all clalendars
 	f_tcalCancel();
 	if (b_close) return;
 
-	// get position of input
 	f_tcalAddClass(this, s_activeClass);
 	
 	var n_left = f_getPosition (this, 'Left'),
