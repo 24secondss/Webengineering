@@ -164,9 +164,7 @@ text-align: center;
 .cart-quantity-input {
     height: 40px;
     width: 40px;
-
     color: black;
- 
     text-align: center;
     font-size: 1.2em;
     margin-right: 50px;
@@ -187,3 +185,45 @@ text-align: center;
     margin: auto;
     font-size: 1.00em;
 }
+
+
+/* Bestellbestätigigung */
+
+* 
+ 
+  .Bestaetigung {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .Bestaetigung input,
+  .Bestaetigung textarea {
+    width: 100%;
+    padding: 6px;
+    font-size: 15px;
+    border: 1px solid gray;
+    
+  }
+  
+
+  button[type="Bestellen"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 30px;
+    color: black;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    
+  }
+ 
+
+  
+  
+  
+ 
+  
