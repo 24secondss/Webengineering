@@ -42,7 +42,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
-			
+								$datum = $_COOKIE['Datum'];
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
 
@@ -63,13 +63,13 @@
 									$zustand_reserviert = $output_array[3];
 									$uhrzeit_reserviert = $output_array[5];
 									if(empty($tisch_reserviert)){			//wenn nich so, dann if($tisch_reserviert == null)
-										echo 'class="frei"';
+										echo 'background: green';
 									}
 									else {
 										if ($tisch_reserviert == 1) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
-													echo 'class="reserviert"';
+													echo 'background: red';
 												}
 											}
 										break;
@@ -84,6 +84,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 								<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -109,7 +110,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 2) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -126,6 +127,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -151,7 +153,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 3) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -169,6 +171,8 @@
 						<div width="25" height="35" align="center"
 							<?php 
 			
+			   					$datum = $_COOKIE['Datum'];
+
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
 
@@ -193,7 +197,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 4) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -210,7 +214,8 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
-			
+								
+								$datum = $_COOKIE['Datum'];
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
 
@@ -235,7 +240,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 5) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -252,6 +257,8 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -277,7 +284,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 6) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -294,6 +301,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -319,7 +327,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 7) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -336,6 +344,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -361,7 +370,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 8) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -378,6 +387,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -403,7 +413,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 9) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}
@@ -420,6 +430,7 @@
 					<td> 
 						<div width="25" height="35" align="center"
 							<?php 
+								$datum = $_COOKIE['Datum'];
 			
         						$file = "Tischreservierungen.txt";
 								$fhandle = fopen($file, "r");
@@ -445,7 +456,7 @@
 									}
 									else {
 										if ($tisch_reserviert == 10) {
-											if ($uhrzeit_reserviert == $_COOKIE['Datum']) {
+											if ($uhrzeit_reserviert == $_COOKIE['Uhrzeit']) {
 												if ($zustand_reserviert == "r") {
 													echo 'class="reserviert"';
 												}

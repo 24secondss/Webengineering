@@ -3,10 +3,13 @@
 	$uhrzeit = $_COOKIE["Uhrzeit"];
 	$personen = $_COOKIE["Personen"];
 
-	$tisch = $_POST["Tisch[]"];
-	$zustand = "r";
+	foreach ($_POST['Tisch'] as $ausgewaelter_Tisch) {
+		if($ausgewaelter_Tisch == "1"){
+			$tisch = $ausgewaelter_Tisch;
+		}
+	}
 
-	echo $tisch;
+	$zustand = "r";
 
 	$tischzustand = $tisch . "---" . $zustand . "---" . $uhrzeit . "---" . $personen;
 
